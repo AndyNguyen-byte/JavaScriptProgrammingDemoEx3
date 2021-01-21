@@ -29,3 +29,32 @@ console.log(now.toTimeString());
 console.log('~~~~~~~~~~~~~~~~~~~');
 console.log('My Age a Billion Seconds After my Birth Date')
 console.log('~~~~~~~~~~~~~~~~~~~');
+
+let birthDate = new Date(2002, 12, 5);
+console.log(`My birthday: ${birthDate}`);
+
+console.log('What is the date 1 billions seconds from my birthdays and how old am I or will be that year');
+
+let seconds = 1000000000;
+let days = seconds / 86400;
+let nextDate = birthDate.getDate() + days;
+let newDate = new Date(
+    birthDate.getFullYear(),
+    birthDate.getMonth(),
+    birthdate.getDate()
+);
+
+newDate.setDate(nextDate);
+
+let age = newDate.getFullYear() - birthDate.getFullYear();
+
+console.log(`My age at year ${newDate.getFullYear()} is or will be ${age}`);
+
+let d2 = new Date(
+    birthDate.getFullYear(),
+    birthDate.getMonth(),
+    birthdate.getDate()
+);
+d2.setSeconds(seconds);
+console.log(d2);
+console.log(newDate);
